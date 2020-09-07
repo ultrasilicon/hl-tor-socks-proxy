@@ -1,0 +1,10 @@
+version: '2'
+services:
+  tor:
+    container_name: tor-socks-proxy
+    build: 
+      context: .
+      dockerfile: Dockerfile.aarch64
+    ports:
+      - "0.0.0.0:9150:9150/tcp"
+    restart: unless-stopped
